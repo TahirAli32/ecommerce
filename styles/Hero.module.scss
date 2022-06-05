@@ -1,0 +1,14 @@
+.slider{
+    svg{
+        cursor: pointer;
+        font-size: 50px;
+        color: #143a51;
+        :hover{
+            color: #146597;
+        }
+    }
+    .rightArrow{
+        position: absolute;
+        right: 0;
+    }
+}

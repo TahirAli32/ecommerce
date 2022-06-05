@@ -2,8 +2,8 @@
     background-color: #143a51;
     color: white;
     padding: 1rem 9rem 0 9rem;
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     width: 100%;
     .top{
         display: flex;
@@ -16,6 +16,7 @@
         }
         .socialLogo{
             display: flex;
+            padding-left: 2rem;
             li{
                 cursor: pointer;
                 margin: 0 8px;
@@ -38,6 +39,8 @@
         }
         h4{
             color: white;
+            padding-bottom: 5px;
+            border-bottom: 0.0625rem solid #174866;
         }
         p, a, span, svg{
             color: rgb(189, 186, 186);
@@ -54,23 +57,22 @@
                     margin-top: 2px;
                     margin-right: 5px;
                 }
+                a{
+                    border-bottom: 0.05rem solid #1e5679;
+                    transition: ease-in-out .5s;
+                }
                 a:hover{
                     color: rgb(238, 238, 238);
+                    border-bottom: 0.0325rem solid #4ea2d6;
                 }
             }
         }
         @media screen and (max-width: 1060px) {
             grid-template-columns: repeat(auto-fill, 50%);
         }
-        @media screen and (max-width: 740px) {
+        @media screen and (max-width: 775px) {
             grid-template-columns: repeat(auto-fill, 100%);
             .usefulLinks, .menus{
-                display: none;
-            }
-        }
-        @media screen and (max-width: 475px) {
-            grid-template-columns: repeat(auto-fill, 100%);
-            .contact, .about{
                 display: none;
             }
         }
@@ -78,19 +80,20 @@
     .copyright{
         border-top: 0.0625rem solid #174866;
         text-align: center;
+        padding: .25rem;
         p{
-            margin: 1rem;
             color: rgb(189, 186, 186);
             font-size: 17px;
             font-weight: 600;
         }
     }
-    @media screen and (max-width: 625px) {
+    @media screen and (max-width: 725px) {
         padding: 0;
-    }
-    @media screen and (max-width: 425px) {
         .top{
             flex-direction: column;
+            .socialLogo{
+                padding: 0;
+            }
         }
     }
 }
