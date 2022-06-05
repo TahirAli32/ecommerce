@@ -1,0 +1,96 @@
+.footer{
+    background-color: #143a51;
+    color: white;
+    padding: 1rem 9rem 0 9rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 4rem;
+        h3{
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        .socialLogo{
+            display: flex;
+            li{
+                cursor: pointer;
+                margin: 0 8px;
+                svg{
+                    font-size: 25px;
+                }
+            }
+        }
+
+    }
+    .bottom{
+        display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fill, 25%);
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+        div{
+            // padding: 0 4rem;
+            margin: 0 4rem;
+        }
+        h4{
+            color: white;
+        }
+        p, a, span, svg{
+            color: rgb(189, 186, 186);
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            li {
+                display: flex;
+                padding-top: 7px;
+                font-size: 16px;
+                svg{
+                    font-size: 17px;
+                    margin-top: 2px;
+                    margin-right: 5px;
+                }
+                a:hover{
+                    color: rgb(238, 238, 238);
+                }
+            }
+        }
+        @media screen and (max-width: 1060px) {
+            grid-template-columns: repeat(auto-fill, 50%);
+        }
+        @media screen and (max-width: 740px) {
+            grid-template-columns: repeat(auto-fill, 100%);
+            .usefulLinks, .menus{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 475px) {
+            grid-template-columns: repeat(auto-fill, 100%);
+            .contact, .about{
+                display: none;
+            }
+        }
+    }
+    .copyright{
+        border-top: 0.0625rem solid #174866;
+        text-align: center;
+        p{
+            margin: 1rem;
+            color: rgb(189, 186, 186);
+            font-size: 17px;
+            font-weight: 600;
+        }
+    }
+    @media screen and (max-width: 625px) {
+        padding: 0;
+    }
+    @media screen and (max-width: 425px) {
+        .top{
+            flex-direction: column;
+        }
+    }
+}
